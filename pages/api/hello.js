@@ -9,21 +9,27 @@ export default function handler(req, res) {
     },
   });
 
-  var mailOptions = {
-    from: sender,
-    to: "kushal.s.2005@gmail.com",
-    subject: "Sending Email using Node.js",
-    text: "That was easy!",
-  };
+  const mails = ["kushal.s.2005@gmail.com", "uzigangsterpubg@gmail.com"];
+  mails.map((mail, index) => {
+    var mailOptions = {
+      from: sender,
+      to: mail,
+      subject: "Sending Email using Node.js",
+      html: `
+    <h1>wawooawoo</h2>
+    `,
+    };
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-      res.status(200).json({ error: error });
-    } else {
-      console.log("Email sent: " + info.response);
-      res.status(200).json({ name: info.response });
-    }
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+        res.status(200).json({ error: error, mail: mail });
+      } else {
+        console.log("Email sent: " + info.response);
+        res.status(200).json({ success: info.response, mail: mail });
+      }
+    });
   });
+
   console.log("waauwa");
 }

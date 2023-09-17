@@ -5,10 +5,11 @@ import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  useEffect(() => {
-    fetch("api/hello")
-      .then((res) => res.json())
-      .then((log) => console.log(log));
-  });
-  return <main>wauuwa</main>;
+  return (
+    <body>
+      <div className="container">
+        <h1>Promptly Launched</h1>
+      </div>
+    </body>
+  );
 }
