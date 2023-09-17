@@ -32,10 +32,6 @@ export default function handler(req, res) {
 
                 <div style="width: 100%; color: black;text-align: center; margin: 10px 0px; border-radius: 20px; padding: 30px 20px; background-color: white; font-weight: 650; font-size: 24px;">Product Hunt </div>
                 </a>
-                <a style="text-decoration: none;" target="_blank" href="kushal.s.2005@gmail.com">
-
-                    <div style="width: 100%; color: black;text-align: center; margin: 10px 0px; border-radius: 20px; padding: 30px 20px; background-color: white; font-weight: 650; font-size: 24px;"> Pitch us your idea and we will build it </div>
-                    </a>
         </div>
 
 </body>
