@@ -16,19 +16,38 @@
   }
 }
 
-body {
+/* body {
   background-color: white;
-}
+} */
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 10%;
   margin: auto;
   background: black;
-  height: 100vw;
+  height: 100vh;
   width: 720px;
 }
 h1 {
+  font-size: 40px;
   color: white;
   font-weight: 900;
+}
+h2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+}
+button {
+  width: 100%;
+  color: black;
+  margin: 10px 0px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  font-weight: 650;
+}
+button:hover {
+  background-color: orange;
 }
