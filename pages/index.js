@@ -19,7 +19,7 @@ export default function Home() {
   }, [users]);
   const sendEmails = () => {
     users.map((user, index) => {
-      fetch(`/api/hello?email=${user.Emails}`)
+      fetch(`/api/send?email=${user.Emails}`)
         .then((res) => res.json())
         .then((res) => console.log(index, res));
     });
