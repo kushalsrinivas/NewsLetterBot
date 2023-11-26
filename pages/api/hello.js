@@ -1,11 +1,11 @@
 const mailer = require("nodemailer");
 export default function handler(req, res) {
-  const sender = "newsletterbot379@gmail.com";
+  const sender = process.env.EMAIL;
   var transporter = mailer.createTransport({
     service: "gmail",
     auth: {
       user: sender,
-      pass: "liippiqozztjjojb",
+      pass: process.env.PASS,
     },
   });
   const mail = req.query.email;
